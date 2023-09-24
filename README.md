@@ -273,3 +273,5 @@ Then create following structure with the token you generated before
 	}
 }
 ```
+
+Added script [./bin/generate_tfrc_credentials](./bin/generate_tfrc_credentials) to automate `credentials.tfrc.json` file generation.
