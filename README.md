@@ -212,6 +212,13 @@ This will run a plan and pass the changeset to be executed by terraform. Apply s
 
 If we want we can automatically approve by passing auto approve flag `terraform apply --auto-approve`
 
+#### Terraform Destroy
+
+`terraform destroy`
+This will destroy reasorces.
+
+You can also use atuo approve to skip confirmation when running this command eg. `terraform destroy --auto-aprove`
+
 ### Terraform Lock File
 
 `.terraform.lock.hcl` contains the locked versioning for the providers and modules that should be used with this project.
