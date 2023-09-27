@@ -230,7 +230,7 @@ At the start of a new terraform project we will run `terraform init` to download
 
 This will generae out a changeset, about the state of our infrasturcture that will be changed.
 
-We can output this changeset ie. "plan" to be passed to an apply, but often you can just ignrore outputing.
+We can output this changeset ie. "plan" to be passed to an apply, but often you can just ignore outputing.
 
 #### Terraform Apply
 
