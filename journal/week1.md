@@ -183,3 +183,30 @@ resource "aws_s3_object" "error_html" {
   etag = filemd5("${path.root}/public/example.html")
 }
 ```
+
+### Terrafrom Locals
+Local allows us to define local variables 
+It can be verry useful when we want to transform data into another format and have referenced a variable.
+locals {
+	s3_origing_id = "MyS3Origin"
+}
+
+[Terrafrom Locals](https://developer.hashicorp.com/terraform/language/values/locals)
+
+### Terrafrom Data sources
+
+This allows us to source data from cloud resource.
+This is usefull whe nwe want to reference resources without importing them.
+
+[Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+
+## Jsonencode Function
+
+jsonencode encodes a given value to a string using JSON syntax.
+
+
+```tf
+> jsonencode({"hello"="world"})
+{"hello":"world"}
+```
+[jsonencode Function](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
