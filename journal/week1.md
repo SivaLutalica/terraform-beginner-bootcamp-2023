@@ -210,3 +210,30 @@ jsonencode encodes a given value to a string using JSON syntax.
 {"hello":"world"}
 ```
 [jsonencode Function](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
+
+### Changing the Lifesycle of Resouces
+
+The Resource Behavior page describes the general lifecycle for resources. Some details of that behavior can be customized using the special nested lifecycle block within a resource block body:
+
+```tf
+lifecycle = {
+    ignore_changes = [
+      # Ignore changes to tags, e.g. because a management agent
+      # updates these based on some ruleset managed elsewhere.
+      tags,
+    ]	
+}
+```
+
+[Meta-Argument lifecycle](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
+
+
+### Terraform Data
+
+The terraform_data resource is useful for storing values which need to follow a manage resource lifecycle, and for triggering provisioners when there is no other logical managed resource in which to place them.
+
+```tf
+resource "terraform_data" "replacement" {
+  input = var.revision
+}
+```
