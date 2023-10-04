@@ -11,6 +11,11 @@ tasks:
       source ./bin/set_tf_alias
       source ./bin/install_aws_cli
       cp $PROJECT_ROOT/terraform.tfvars.example $PROJECT_ROOT/terraform.tfvars
+  - name: http-server
+    before: |
+      npm install --global http-server
+    command: 
+      http-server
 vscode:
   extensions:
     - amazonwebservices.aws-toolkit-vscode
