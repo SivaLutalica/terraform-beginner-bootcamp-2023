@@ -1,5 +1,0 @@
-tasks:
-  - name: sinatra
-    init: | 
-      bundle install
-      bundle exec ruby server.rb 
