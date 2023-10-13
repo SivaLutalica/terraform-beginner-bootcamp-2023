@@ -10,22 +10,16 @@ variable "teacherseat_user_uuid" {
   type = string
 }
 
-variable "index_html_filepah" {
-	description = "The file path for index.html"
-	type = string
+variable "krupa" {
+  type = object({
+    public_path = string
+    content_version = number
+  })
 }
 
-variable "error_html_filepah" {
-	description = "The file path for error.html"
-	type = string
-}
-
-variable "content_version" {
-	description = "Set the content version"
-	type = number
-}
-
-variable "assets_path" {
-  description = "Path to assets folder"
-  type = string
+variable "blood" {
+  type = object({
+    public_path = string
+    content_version = number
+  })
 }
